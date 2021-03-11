@@ -1,1 +1,1 @@
-db.voos.countDocuments({ $or: [{ ano: { $lte: 2018 } }, { ano: { $gte: 2017 } }] });
+db.voos.countDocuments({ $or: [{ ano: { $lte: 2018, $gte: 2017 } }] });
