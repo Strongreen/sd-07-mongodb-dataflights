@@ -1,2 +1,2 @@
-db.getCollection('voos')
-  .countDocuments({ "empresa.nome" : "GOL" });
+db.getCollection("voos")
+  .countDocuments({ "empresa.nome": "GOL" });

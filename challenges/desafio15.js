@@ -1,2 +1,2 @@
-db.getCollection('voos')
-  .countDocuments({ decolagens: { $gt: 20 }});
+db.getCollection("voos")
+  .countDocuments({ decolagens: { $gt: 20 } });

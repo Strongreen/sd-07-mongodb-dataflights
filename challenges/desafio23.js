@@ -1,3 +1,3 @@
-db.getCollection('voos')
-  .findOne({ litrosCombustivel: { $lt: 1000 }},
+db.getCollection("voos")
+  .findOne({ litrosCombustivel: { $lt: 1000 } },
     { _id: 0, vooId: 1, litrosCombustivel: 1 });
