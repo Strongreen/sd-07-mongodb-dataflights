@@ -125,4 +125,21 @@ db.voos
     { _id: 0, vooId: 1, litrosCombustivel: 1, "empresa.nome": 1 }
   )
   .limit(1);
-   db.voos.find()
+/**25 - Remova todos os voos da empresa AZUL em que a quantidade de combustível seja menor 
+do que 400. Informe a quantidade de documentos removidos.
+ */
+db.voos.deleteMany({$and: [
+  {"empresa.nome": "AZUL"},
+  {"litrosCombustivel": { $lt: 400}}
+]})
+
+try {
+   db.voos.deleteMany({$and: [
+  {"empresa.nome": "AZUL"},
+  {"litrosCombustivel": { $lt: 400}}
+]})
+} catch (e) {
+   print (e);
+}
+
+db.voos.find()
