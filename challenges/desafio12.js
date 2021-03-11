@@ -1,4 +1,4 @@
-db.voos.find(
+db.voos.countDocuments(
   {
     "aeroportoDestino.pais": { $in: ["BRASIL", "ARGENTINA", "CHILE"] },
   },
