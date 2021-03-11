@@ -1,11 +1,8 @@
-
-use('dataFlights');
-
 db.getCollection('voos')
-.find({
+  .find({
     $or: [
-        { "aeroportoDestino.pais": "BRASIL"},
-        { "aeroportoDestino.pais": "CHILE"},
-        { "aeroportoDestino.pais": "ARGENTINA"}
-    ]
-});
+      { "aeroportoDestino.pais": "BRASIL"},
+      { "aeroportoDestino.pais": "CHILE"},
+      { "aeroportoDestino.pais": "ARGENTINA"},
+    ],
+  });

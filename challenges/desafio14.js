@@ -1,5 +1,5 @@
 use('dataFlights');
 
 db.getCollection('voos')
-.countDocuments({ "aeroportoOrigem.pais":
-{ $ne: "BRASIL" }});
+  .countDocuments({ "aeroportoOrigem.pais":
+    { $ne: "BRASIL" } });

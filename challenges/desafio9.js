@@ -1,9 +1,7 @@
-use('dataFlights');
-
 db.getCollection('voos')
-.countDocuments({
+  .countDocuments({
     $and: [
-        { ano: { $gt: 2016 } },
-        { ano: { $lt: 2019 } }
+      { ano: { $gt: 2016 } },
+      { ano: { $lt: 2019 } },
     ]
-});
+  });

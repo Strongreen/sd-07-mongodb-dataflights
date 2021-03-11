@@ -1,5 +1,3 @@
-use('dataFlights');
-
 db.getCollection('voos')
-    .findOne({ litrosCombustivel: { $lt: 1000 }},
+  .findOne({ litrosCombustivel: { $lt: 1000 }},
     { _id: 0, vooId: 1, litrosCombustivel: 1 });

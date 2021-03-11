@@ -1,4 +1,2 @@
-use('dataFlights');
-
 db.getCollection('voos')
-    .countDocuments({ decolagens: { $gt: 20 }});
+  .countDocuments({ decolagens: { $gt: 20 }});

@@ -1,5 +1,3 @@
-use('dataFlights');
-
 db.getCollection('voos')
-    .findOne({ litrosCombustivel: { $exists: true }},
-        { _id: 0, vooId: 1 });
+  .findOne({ litrosCombustivel: { $exists: true }},
+    { _id: 0, vooId: 1 });

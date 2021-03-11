@@ -1,4 +1,2 @@
-use('dataFlights');
-
 db.getCollection('voos')
-    .countDocuments({ natureza: "Doméstica" });
+  .countDocuments({ natureza: "Doméstica" });

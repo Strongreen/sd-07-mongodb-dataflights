@@ -1,16 +1,13 @@
-
-use('dataFlights');
-
 db.getCollection('voos')
-    .findOne({
-        $and: [
-            {
-                $or: [
-                    { "empresa.nome": "DELTA AIRLINES"},
-                    { "empresa.nome": "AMERICAN AIRLINES"}
-                ]
-            },
-            { "aeroportoOrigem.sigla": "SBGR" },
-            { "aeroportoDestino.sigla": "KJFK" }
+  .findOne({
+    $and: [
+      {
+        $or: [
+          { "empresa.nome": "DELTA AIRLINES"},
+          { "empresa.nome": "AMERICAN AIRLINES"},
         ]
-    }, { _id:0, vooId: 1 });
+      },
+      { "aeroportoOrigem.sigla": "SBGR" },
+      { "aeroportoDestino.sigla": "KJFK" },
+    ],
+  }, { _id:0, vooId: 1 });
