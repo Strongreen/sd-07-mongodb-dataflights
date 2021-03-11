@@ -17,3 +17,6 @@ igual a 756807.
  /** 7 - Retorne a quantidade de voos em que o ano seja menor do que 2017.
   */
   db.voos.count({ "ano": { $lt: 2017}})
+
+  /**8 - Retorne a quantidade de voos em que o ano seja maior do que 2016. */
+    db.voos.count({ "ano": { $gt: 2016}})
