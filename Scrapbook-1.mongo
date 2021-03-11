@@ -7,3 +7,9 @@ db.voos.count({ "empresa.nome": "GOL"});
 
 /**5 - Retorne o vooId do décimo ao décimo segundo documento da coleção voos. */
 db.voos.find({}, {_id: 0, "vooId": 1}).limit(3).skip(9);
+
+/**6 - Retorne apenas os campos empresa.sigla, 
+empresa.nome e passageiros do voo com o campo vooId 
+igual a 756807.
+ */
+ db.voos.find({ "vooId": 756807 }, { "empresa.sigla": 1, "empresa.nome": 1, "passageiros": 1, _id: 0 })
