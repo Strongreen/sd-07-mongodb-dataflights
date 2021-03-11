@@ -1,6 +1,5 @@
-db.getCollection('voos')
+db.getCollection("voos")
   .countDocuments({
-      "aeroportoDestino.pais": { $in: ["BRASIL", "ARGENTINA", "CHILE"] }
-    },
-    {}
-  );
+    "aeroportoDestino.pais": { $in: ["BRASIL", "ARGENTINA", "CHILE"] },
+  },
+  {});

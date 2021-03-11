@@ -1,1 +1,1 @@
-db.getCollection('voos').countDocuments({ "empresa.nome": "AZUL" }, {});
+db.getCollection("voos").countDocuments({ "empresa.nome": "AZUL" }, {});

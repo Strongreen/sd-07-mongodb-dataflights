@@ -1,6 +1,5 @@
-db.getCollection('voos')
+db.getCollection("voos")
   .countDocuments({
-      "aeroportoDestino.continente": { $nin: ["EUROPA", "ÁSIA", "OCEANIA"] }
-    },
-    {}
-  );
+    "aeroportoDestino.continente": { $nin: ["EUROPA", "ÁSIA", "OCEANIA"] },
+  },
+  {});
