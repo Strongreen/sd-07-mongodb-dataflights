@@ -1,5 +1,5 @@
 db.getCollection("voos")
-  .find({
+  .countDocuments({
     $or: [
       { "aeroportoDestino.pais": "BRASIL" },
       { "aeroportoDestino.pais": "ARGENTINA" },
