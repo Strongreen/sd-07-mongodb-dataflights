@@ -47,27 +47,28 @@ db.voos.find({
   _id: 0,
   }).limit(10).pretty();
 
-  /**11 - Retorne a quantidade de documentos em que o campo aeroportoDestino.pais 
-  não seja igual a ESTADOS UNIDOS.
-   */
-   db.voos.count({"aeroportoDestino.pais": { $ne: "ESTADOS UNIDOS"}})
+/**11 - Retorne a quantidade de documentos em que o campo aeroportoDestino.pais 
+não seja igual a ESTADOS UNIDOS.
+ */
+ db.voos.count({"aeroportoDestino.pais": { $ne: "ESTADOS UNIDOS"}})
+ /** 12 - Retorne a quantidade de documentos em que o campo 
+ aeroportoDestino.pais seja igual a BRASIL, ARGENTINA ou CHILE.
+  */
+db.voos.count({"aeroportoDestino.pais": { $in: ["BRASIL", "ARGENTINA", "CHILE"]}})
+/**13 - Retorne a quantidade de documentos em que o campo
+ aeroportoDestino.continente não seja igual a EUROPA, ÁSIA e OCEANIA.
+ */
+ db.voos.count({"aeroportoDestino.continente": { $nin: ["EUROPA", "ÁSIA", "OCEANIA"]}});
+ /**14 - Retorne o total de voos em que o país de origem não seja BRASIL.
+  */
+db.voos.count({"aeroportoOrigem.pais": { $ne: "BRASIL"}})
+/**15 - Retorne o total de voos com mais de 20 decolagens. */
+db.voos.count({ "decolagens": { $gt: 20 }})
+/**16 - Retorne o total de voos em que o campo natureza 
+possui o valor Internacional.
+ */
+db.voos.count({"natureza": "Internacional"});
 
-   /** 12 - Retorne a quantidade de documentos em que o campo 
-   aeroportoDestino.pais seja igual a BRASIL, ARGENTINA ou CHILE.
-    */
-    db.voos.count({"aeroportoDestino.pais": { $in: ["BRASIL", "ARGENTINA", "CHILE"]}})
-    /**13 - Retorne a quantidade de documentos em que o campo
-     aeroportoDestino.continente não seja igual a EUROPA, ÁSIA e OCEANIA.
-     */
-     db.voos.count({"aeroportoDestino.continente": { $nin: ["EUROPA", "ÁSIA", "OCEANIA"]}});
-
-     /**14 - Retorne o total de voos em que o país de origem não seja BRASIL.
-      */
-      db.voos.count({"aeroportoOrigem.pais": { $ne: "BRASIL"}})
-
-      /**15 - Retorne o total de voos com mais de 20 decolagens. */
-      db.voos.count({ "decolagens": { $gt: 20 }})
-      /**16 - Retorne o total de voos em que o campo natureza 
-      possui o valor Internacional.
-       */
-       db.voos.count({"natureza": "Internacional"});
+/**17 - Retorne o total de voos em que o campo natureza possui o valor Doméstica.
+*/
+db.voos.count({"natureza": "Doméstica"});
