@@ -1,1 +1,1 @@
-db.voos.count({ "aeroportoDestino.pais": { $ne: "ESTADOS UNIDOS" } });
+db.voos.find({ "aeroportoDestino.pais": { $ne: "ESTADOS UNIDOS" } }).count();
