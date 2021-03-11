@@ -1,4 +1,4 @@
 db.voos.find(
   {},
-  { _id: true },
+  { vooId: true, _id: false },
 ).skip(9).limit(2);
