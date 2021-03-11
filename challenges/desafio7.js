@@ -1,3 +1,2 @@
-use("dataFlights");
 db.getCollection("voos")
-  .count({"ano" : {"$lt": 2017}});
+  .count({ ano: { $lt: 2017 } });

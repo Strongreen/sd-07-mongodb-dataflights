@@ -1,3 +1,2 @@
-use("dataFlights");
 db.getCollection("voos")
-  .count({ "aeroportoDestino.pais": {"$in":["BRASIL","ARGENTINA", "CHILE"]}});
+  .count({ "aeroportoDestino.pais": { $in: ["BRASIL", "ARGENTINA", "CHILE"] } });
