@@ -136,10 +136,28 @@ db.voos.deleteMany({$and: [
 esteja entre 5 e 10, incluindo os casos em que a quantidade é 5 e 10. 
 Informe a quantidade de documentos removidos.
  */
- db.voos.deleteMany({$and: [
-   {"empresa.nome": "GOL"},
-   {"passageiros.pagos":  { $gte: 5 }},
-   {"passageiros.pagos":  { $lte: 10 }}
- ]});
+db.voos.deleteMany({$and: [
+  {"empresa.nome": "GOL"},
+  {"passageiros.pagos":  { $gte: 5 }},
+  {"passageiros.pagos":  { $lte: 10 }}
+]});
+/**27 - Retorne a quantidade total de voos de natureza Doméstica que a empresa 
+PASSAREDO possui, via uso de uma nova coleção chamada resumoVoos.
 
+1 - Conte quantos voos da empresa PASSAREDO cujo campo natureza possua 
+valor igual a Doméstica e crie uma query que insira na coleção resumoVoos 
+um documento com os campos: empresa (nome da empresa) e totalVoosDomesticos
+(o total retornado anteriormente).
+ */
+ db.voos.count({
+   $and: [
+     {"empresa.nome": "PASSAREDO"},
+     {"natureza": "Doméstica"}
+   ]
+ })
+db.resumoVoos.insertOne({
+  empresa: "PASSAREDO",
+  "totalVoosDomesticos": 4187
+});
+db.resumoVoos.find({}, {_id: 0, "empresa": 1, "totalVoosDomesticos": 1 })
 db.voos.find()
