@@ -10,6 +10,7 @@ db.voos
       "aeroportoDestino.nome": true,
       mes: true,
       ano: true,
+      _id: false,
     },
   )
   .limit(10);
