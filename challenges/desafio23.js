@@ -1,5 +1,5 @@
 db.voos.findOne({
-  and: [
+  $and: [
     { litrosCombustivel: { $lte: 1000 } },
     { litrosCombustivel: { $exists: true } },
   ],
