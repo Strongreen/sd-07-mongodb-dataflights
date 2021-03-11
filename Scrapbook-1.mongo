@@ -1,25 +1,48 @@
 db.voos.find({ "empresa.nome": "AZUL" }).limit(10).pretty();
-db.voos.find({ "empresa.nome": "AZUL"}).limit(10);
+db.voos.find({ "empresa.nome": "AZUL" }).limit(10);
 
-db.voos.count({ "empresa.nome": "AZUL"});
+db.voos.count({ "empresa.nome": "AZUL" });
 
-db.voos.count({ "empresa.nome": "GOL"});
+db.voos.count({ "empresa.nome": "GOL" });
 
 /**5 - Retorne o vooId do décimo ao décimo segundo documento da coleção voos. */
-db.voos.find({}, {_id: 0, "vooId": 1}).limit(3).skip(9);
+db.voos.find({}, { _id: 0, vooId: 1 }).limit(3).skip(9);
 
 /**6 - Retorne apenas os campos empresa.sigla, 
 empresa.nome e passageiros do voo com o campo vooId 
 igual a 756807.
  */
- db.voos.find({ "vooId": 756807 }, { "empresa.sigla": 1, "empresa.nome": 1, "passageiros": 1, _id: 0 })
+db.voos.find(
+  { vooId: 756807 },
+  { "empresa.sigla": 1, "empresa.nome": 1, passageiros: 1, _id: 0 }
+);
 
- /** 7 - Retorne a quantidade de voos em que o ano seja menor do que 2017.
-  */
-  db.voos.count({ "ano": { $lt: 2017}})
+/** 7 - Retorne a quantidade de voos em que o ano seja menor do que 2017.
+ */
+db.voos.count({ ano: { $lt: 2017 } });
 
-  /**8 - Retorne a quantidade de voos em que o ano seja maior do que 2016. */
-    db.voos.count({ "ano": { $gt: 2016}})
+/**8 - Retorne a quantidade de voos em que o ano seja maior do que 2016. */
+db.voos.count({ ano: { $gt: 2016 } });
 
-    /**9 - Retorne a quantidade de voos entre os anos de 2017 e 2018 */
-  db.voos.count({"ano": { $in: [2017, 2018]}});
+/**9 - Retorne a quantidade de voos entre os anos de 2017 e 2018 */
+db.voos.count({ ano: { $in: [2017, 2018] } });
+/**10 - Retorne apenas os 10 primeiros documentos com voos da 
+empresa GOL do ano de 2017. Exiba apenas os campos vooId, 
+empresa.nome, aeroportoOrigem.nome, aeroportoDestino.nome, mes e ano.
+ */
+ db.voos.find()
+db.voos.find({
+  $and: [
+    {"empresa.nome": { $eq: "GOL" } },
+    {"ano": { $eq: 2017 } }
+  ]
+}, 
+{
+  "vooId": 1,
+  "empresa.nome": 1,
+  "aeroportoOrigem.nome": 1,
+  "aeroportoDestino.nome": 1,
+  "ano": 1,
+  "mes": 1,
+  _id: 0,
+  }).limit(10).pretty();
