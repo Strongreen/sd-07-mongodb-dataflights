@@ -11,7 +11,7 @@ db.voos
       ano: 1,
       mes: 1,
       _id: 0,
-    }
+    },
   )
   .limit(10)
   .pretty();
