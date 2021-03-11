@@ -6,7 +6,7 @@ db.voos.findOne(
     },
   },
   {
-    vooId: 1,
-    _id: 0,
+    vooId: true,
+    _id: false,
   },
 );
