@@ -9,4 +9,4 @@ db.voos.find(
     ano: 1,
     _id: 0,
   },
-);
+).limit(10);
