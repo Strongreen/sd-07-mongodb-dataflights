@@ -76,3 +76,6 @@ db.voos.count({"natureza": "Doméstica"});
  */
  db.voos.find()
  db.voos.find({"passageiros.pagos": { $gt: 7000}}, {_id: 0, "vooId": 1, "mes": 1, "ano": 1}).limit(1).pretty();
+ /**19 - Retorne o vooId do primeiro voo em que o campo litrosCombustivel exista.
+  */
+  db.voos.find({"litrosCombustivel": { $exists: true}}, {_id: 0, "vooId": 1}).limit(1)
