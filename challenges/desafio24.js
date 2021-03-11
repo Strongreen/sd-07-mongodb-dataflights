@@ -3,7 +3,7 @@ db.getCollection("voos")
     $and: [
       { litrosCombustivel: { $lt: 600 } },
       { "empresa.nome": { $ne: "AZUL" } },
-      { "empresa.nome": { $ne: "GOL" }} ,
+      { "empresa.nome": { $ne: "GOL" } },
     ],
   },
   {

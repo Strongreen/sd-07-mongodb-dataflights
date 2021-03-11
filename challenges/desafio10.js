@@ -1,6 +1,6 @@
 db.getCollection("voos")
   .find({
-      $and: [
+    $and: [
       { ano: 2017 },
       { "empresa.nome": "GOL" },
     ],

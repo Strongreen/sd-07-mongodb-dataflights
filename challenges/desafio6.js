@@ -1,4 +1,4 @@
-db.getCollection('voos')
+db.getCollection("voos")
   .find({ vooId: 756807 },
     {
       _id: 0,
