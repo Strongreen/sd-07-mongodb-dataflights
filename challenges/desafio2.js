@@ -1,1 +1,6 @@
-db.getCollection("voos").find({}).limit(10);
+db.getCollection("voos")
+  .find(
+    {
+      "empresa.nome": "AZUL",
+    },
+  ).limit(10);
