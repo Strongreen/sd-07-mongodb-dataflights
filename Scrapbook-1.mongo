@@ -85,3 +85,17 @@ db.voos.find({"litrosCombustivel": { $exists: true}}, {_id: 0, "vooId": 1}).limi
  /**21 - Retorne o vooId do primeiro voo em que o campo litrosCombustivel seja maior ou igual a 1000.
   */
 db.voos.find({"litrosCombustivel": { $gte: 1000}}, {_id: 0, "vooId": 1}).limit(1);
+/**22 - Retorne o vooId do primeiro voo em que a empresa seja DELTA AIRLINES 
+ou AMERICAN AIRLINES, a sigla do aeroporto de origem seja SBGR e a sigla do aeroporto 
+de destino seja KJFK.
+ */
+ db.voos.find(
+ { $and:
+    [
+      {"empresa.nome": { $in: ["DELTA AIRLINES", "AMERICAN AIRLINES"]}},
+      {"aeroportoOrigem.sigla": "SBGR"},
+      {"aeroportoDestino.sigla": "KJFK"}
+    ]
+ },
+  {_id: 0, "vooId": 1}).limit(1);
+db.voos.find()
