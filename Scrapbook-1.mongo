@@ -60,3 +60,7 @@ db.voos.find({
      aeroportoDestino.continente não seja igual a EUROPA, ÁSIA e OCEANIA.
      */
      db.voos.count({"aeroportoDestino.continente": { $nin: ["EUROPA", "ÁSIA", "OCEANIA"]}});
+
+     /**14 - Retorne o total de voos em que o país de origem não seja BRASIL.
+      */
+      db.voos.count({"aeroportoOrigem.pais": { $ne: "BRASIL"}})
