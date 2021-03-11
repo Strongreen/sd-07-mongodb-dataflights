@@ -10,5 +10,5 @@ db.voos.findOne(
       { "aeroportoDestino.sigla": "KJFK" },
     ],
   },
-  { _id: 0, vooId: 1 },
+  { vooId: 1, _id: 0 },
 );
