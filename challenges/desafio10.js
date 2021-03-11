@@ -10,4 +10,3 @@ db.voos.find(
     mes: 1,
   },
 ).limit(10).pretty();
-
