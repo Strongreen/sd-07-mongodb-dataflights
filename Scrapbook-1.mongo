@@ -5,4 +5,5 @@ db.voos.count({ "empresa.nome": "AZUL"});
 
 db.voos.count({ "empresa.nome": "GOL"});
 
-
+/**5 - Retorne o vooId do décimo ao décimo segundo documento da coleção voos. */
+db.voos.find({}, {_id: 0, "vooId": 1}).limit(3).skip(9);
