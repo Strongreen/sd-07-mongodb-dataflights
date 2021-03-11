@@ -6,5 +6,6 @@ db.voos.findOne({
   "aeroportoOrigem.sigla": "SBGR",
   "aeroportoDestino.sigla": "KJFK",
 }, {
+  _id: 0,
   vooId: 1,
 });
