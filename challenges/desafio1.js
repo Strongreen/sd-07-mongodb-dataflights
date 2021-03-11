@@ -1,1 +1,1 @@
-db.getCollection('voos').countDocuments({});
+db.getCollection("voos").countDocuments({});
