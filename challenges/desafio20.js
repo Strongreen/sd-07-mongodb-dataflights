@@ -1,9 +1,9 @@
 db.voos.findOne(
   {
-    rtk: {$exists: 0}
+    rtk: { $exists: 0 },
   },
   {
     _id: 0,
-    vooId: 1
-  }
+    vooId: 1,
+  },
 );
