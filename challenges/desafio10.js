@@ -9,4 +9,4 @@ db.voos.find({ $and: [
   "aeroportoDestino.nome": 1,
   mes: 1,
   ano: 1,
-});
+}).limit(10);
