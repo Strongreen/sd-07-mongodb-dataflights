@@ -1,1 +1,1 @@
-db.voos.find({ pais: { $ne: "BRASIL" } });
+db.voos.find({ pais: { $ne: "BRASIL" } }).count();
