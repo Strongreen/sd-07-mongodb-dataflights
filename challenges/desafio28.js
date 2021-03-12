@@ -9,7 +9,7 @@ db.resumoVoos.insertOne({
 });
 
 db.resumoVoos.findOne({
-  empresa: "LATAM AIRLINES BRASIL"
+  empresa: "LATAM AIRLINES BRASIL",
 },
 {
   _id: 0,
