@@ -1,6 +1,6 @@
 db.voos.findOne({
   $and: [{ litrosCombustivel: { $not: { $gt: 600 } } },
-    { $or: [{ "empresa.nome": "GOL" }, { "empresa.nome": "AZUL" }] },
+    { $nor: [{ "empresa.nome": "GOL" }, { "empresa.nome": "AZUL" }] },
     { litrosCombustivel: { $exists: true } }],
 },
 {
