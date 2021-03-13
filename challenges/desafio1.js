@@ -1,1 +1,1 @@
-// criar PR
+db.voos.countDocuments();
