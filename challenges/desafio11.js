@@ -1,5 +1,5 @@
 db.voos.find({
-  "aeroportoDestino.nome": {
+  "aeroportoDestino.pais": {
     $ne: "ESTADOS UNIDOS",
   },
 }).count();
