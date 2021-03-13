@@ -1,6 +1,6 @@
 db.voos.find({
   ano: 2017,
-  "empresa.nome": "GOL"
+  "empresa.nome": "GOL",
 }, {
   _id: 0,
   vooId: 1,
