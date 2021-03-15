@@ -5,4 +5,5 @@ db.voos.find(
     "aeroportoOrigem.nome": true,
     "aeroportoDestino.nome": true,
     mes: true,
-    ano: true }).limit(10);
+    ano: true }
+).limit(10);
