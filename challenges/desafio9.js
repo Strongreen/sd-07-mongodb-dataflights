@@ -1,5 +1,3 @@
-/** @format */
-
 db.voos
   .find({
     ano: {
