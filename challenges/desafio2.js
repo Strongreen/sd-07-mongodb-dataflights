@@ -1,3 +1,7 @@
-db.voos.find({
-    "empresa.nome": "AZUL"
-}).limit(10);
+/** @format */
+
+db.voos
+  .find({
+    "empresa.nome": "AZUL",
+  })
+  .limit(10);
