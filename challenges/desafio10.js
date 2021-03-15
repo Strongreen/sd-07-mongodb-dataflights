@@ -1,11 +1,10 @@
 /** @format */
 
 db.voos
-  .find(
+  .find({
     {
       "empresa.nome": "GOL",
       ano: 2017,
-    },
     },
     { _id: 0,
      vooId: 1, 
@@ -14,5 +13,6 @@ db.voos
      "aeroportoDestino.nome": 1, 
      mes: 1, 
      ano:1, 
-    })
+    }
+  })
   .limit(10);

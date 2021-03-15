@@ -1,5 +1,9 @@
-db.voos.find({
-    ano:{
-        $gt:2016
-    }
-}).countDocuments();
+/** @format */
+
+db.voos
+  .find({
+    ano: {
+      $gt: 2016,
+    },
+  })
+  .countDocuments();
