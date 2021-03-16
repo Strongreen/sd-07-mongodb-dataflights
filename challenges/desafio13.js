@@ -3,6 +3,7 @@ db.voos.find({
     $nin: [
       "EUROPA",
       "ÁSIA",
+      "OCEANIA",
     ],
   },
 })
