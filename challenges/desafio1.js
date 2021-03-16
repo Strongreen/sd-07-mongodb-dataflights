@@ -1,3 +1,1 @@
-/** @format */
-
 db.voos.countDocuments();

@@ -1,5 +1,3 @@
-/** @format */
-
 db.voos.deleteMany({
   "empresa.nome": "GOL",
   $and: [
