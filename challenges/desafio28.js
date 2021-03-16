@@ -17,6 +17,6 @@ db.resumoVoos.findOne(
   {
     _id: 0,
     empresa: 1,
-    totalVoosDomesticos: 1,
+    totalVoosDomesticos: 0,
   },
 );
