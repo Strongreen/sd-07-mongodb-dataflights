@@ -18,4 +18,4 @@ db.voos
       },
     ],
   })
-  .countDocuments();
+  .count();
