@@ -7,7 +7,7 @@ db.resumoVoos.insertOne({
       "empresa.nome": "PASSAREDO",
       natureza: "Doméstica",
     })
-    .countDocuments(),
+    .count(),
 });
 
 db.resumoVoos.findOne(

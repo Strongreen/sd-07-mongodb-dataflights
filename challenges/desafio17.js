@@ -2,4 +2,4 @@ db.voos
   .find({
     natureza: "Doméstica",
   })
-  .countDocuments();
+  .count();

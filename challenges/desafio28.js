@@ -7,7 +7,7 @@ db.resumoVoos.insertOne({
       "empresa.nome": "LATAM AIRLINES BRASIL",
       natureza: "Doméstica",
     })
-    .countDocuments(),
+    .count(),
 });
 
 db.resumoVoos.findOne(

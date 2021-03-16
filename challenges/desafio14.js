@@ -4,4 +4,4 @@ db.voos
       $ne: "BRASIL",
     },
   })
-  .countDocuments();
+  .count();

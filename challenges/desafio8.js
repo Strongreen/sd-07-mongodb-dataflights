@@ -4,4 +4,4 @@ db.voos
       $gt: 2016,
     },
   })
-  .countDocuments();
+  .count();

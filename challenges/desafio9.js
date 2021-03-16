@@ -4,4 +4,4 @@ db.voos
       $in: [2017, 2018],
     },
   })
-  .countDocuments();
+  .count();

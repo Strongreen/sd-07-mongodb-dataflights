@@ -12,4 +12,4 @@ db.voos
       ano: 1,
     },
   )
-  .countDocuments();
+  .count();

@@ -4,4 +4,4 @@ db.voos
       $gt: 20,
     },
   })
-  .countDocuments();
+  .count();
