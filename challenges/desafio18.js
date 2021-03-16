@@ -1,4 +1,4 @@
-db.voos.find(
+db.voos.findOne(
   { "passageiros.pagos": 7000 },
   {
     _id: 0,
@@ -6,4 +6,4 @@ db.voos.find(
     mes: 1,
     ano: 1,
   },
-).sort({ "passageiros.pagos": 1 });
+);
