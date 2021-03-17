@@ -1,14 +1,5 @@
 db.voos.findOne({
-  $and: [
-    { $or: [
-      { "empresa.nome": "DELTA AIRLINES" },
-      { "empresa.nome": "AMERICAN AIRLINES" },
-    ] },
-    {
-      $and: [
-        { "aeroportoOrigem.sigla": "SBGR" },
-        { "aeroportoDestino.sigla": "KJFK" },
-      ],
-    },
-  ],
+  litrosCombustivel: {
+    $gte: 1000,
+  },
 }, { vooId: true, _id: false });
