@@ -16,7 +16,8 @@ db.voos.findOne(
     ],
   },
   {
-    _id: 0, vooId: 1,
+    _id: 0,
+    vooId: 1,
     litrosCombustivel: 1,
-    },
+  },
 );
