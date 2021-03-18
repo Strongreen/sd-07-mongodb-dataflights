@@ -1,1 +1,1 @@
-db.voos.countDocuments({ "aeroportoOrigem.pais": { $ne: 'BRASIL' } });
+db.voos.countDocuments({ "aeroportoOrigem.pais": { $ne: "BRASIL" } });

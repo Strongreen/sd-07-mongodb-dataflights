@@ -1,1 +1,1 @@
-db.voos.countDocuments({ natureza: { $eq: 'Doméstica' } });
+db.voos.countDocuments({ natureza: { $eq: "Doméstica" } });

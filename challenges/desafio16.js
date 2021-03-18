@@ -1,1 +1,1 @@
-db.voos.countDocuments({ natureza: { $eq: 'Internacional' } });
+db.voos.countDocuments({ natureza: { $eq: "Internacional" } });
