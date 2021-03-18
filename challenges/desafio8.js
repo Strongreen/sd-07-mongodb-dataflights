@@ -1,7 +1,7 @@
 db.voos.find(
   {
     ano: {
-      $lt:2017,
+      $gt:2016,
     },
   },
 ).count();
