@@ -1,5 +1,5 @@
 db.voos.find(
   {
-    "natureza": "Internacional",
+    natureza: "Internacional",
   },
 ).count();
