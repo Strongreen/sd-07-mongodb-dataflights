@@ -1,5 +1,5 @@
 db.getCollection("voos").find({ "empresa.nome":
     { $in: ["DELTA AIRLINES", "AMERICAN AIRLINES"] },
-"aeroportoOrigem.sigla": { $eq: "SBGR" },
+"aeroportoOrigem.sigla": "SBGR",
 "aeroportoDestino.sigla":
-    { $eq: "KJFK" } }, { vooId: 1, _id: 0 }).limit(1);
+   "KJFK" }, { vooId: 1, _id: 0 }).limit(1);
