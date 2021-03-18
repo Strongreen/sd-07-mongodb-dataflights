@@ -1,1 +1,1 @@
-db.voos.count({ "aeroportoOrigem.pais": "BRASIL" });
+db.voos.count({ "aeroportoOrigem.pais": { $not: "BRASIL" } });
