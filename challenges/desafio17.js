@@ -1,5 +1,5 @@
 db.voos.find(
   {
-    natureza: "doméstica",
+    natureza: "Doméstica",
   },
 ).count();
