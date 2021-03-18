@@ -1,6 +1,6 @@
 db.voos.find(
   {
-    "litrosCombustivel": {
+    litrosCombustivel: {
       $exists: true,
     },
   },
