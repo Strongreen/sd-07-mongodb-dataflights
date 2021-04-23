@@ -1,12 +1,12 @@
 db.voos.find(
   { $and: [{ "empresa.nome": "GOL" }, { ano: 2017 }] },
   {
-    _id: false,
-    vooId: true,
-    "empresa.nome": true,
-    "aeroportoOrigem.nome": true,
-    "aeroporto.destino": true,
-    mes: true,
-    ano: true,
+    _id: 0,
+    vooId: 1,
+    "empresa.nome": 1,
+    "aeroportoOrigem.nome": 1,
+    "aeroportoDestino.nome": 1,
+    mes: 1,
+    ano: 1,
   },
 );

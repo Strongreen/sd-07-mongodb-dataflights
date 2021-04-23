@@ -1,4 +1,4 @@
 db.voos.find(
   { vooId: 756807 },
-  { _id: false, vooId: true, "empresa.sigla": true, "empresa.nome": true, passageiros: true },
+  { _id: 0, vooId: 1, "empresa.sigla": 1, "empresa.nome": 1, passageiros: 1 },
 );
