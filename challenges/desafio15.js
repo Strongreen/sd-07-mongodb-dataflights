@@ -1,3 +1,3 @@
 db.voos.countDocuments({
-    decolagens: { $gt: 20 },
+  decolagens: { $gt: 20 },
 });

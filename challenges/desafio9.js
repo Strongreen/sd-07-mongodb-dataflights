@@ -1,6 +1,6 @@
 db.voos.countDocuments({
-    ano: {
-        $gte: 2017,
-        $lte: 2018,
-    },
+  ano: {
+    $gte: 2017,
+    $lte: 2018,
+  },
 });

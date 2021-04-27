@@ -1,3 +1,3 @@
 db.voos.countDocuments({
-    natureza: "Internacional",
+  natureza: "Internacional",
 });

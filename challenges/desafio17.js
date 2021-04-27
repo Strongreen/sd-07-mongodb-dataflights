@@ -1,3 +1,3 @@
 db.voos.countDocuments({
-    natureza: "Doméstica",
+  natureza: "Doméstica",
 });
